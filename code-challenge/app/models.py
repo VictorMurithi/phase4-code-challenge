@@ -45,6 +45,7 @@ class HeroPower(db.Model):
     created_at = db.Column(db.DateTime)
     updated_at = db.Column(db.DateTime)
 
+
     # Relationship: A hero power belongs to one hero
     hero = db.relationship('Hero', back_populates='hero_powers')
 
