@@ -118,7 +118,7 @@ def create_hero_power():
     if not hero:
         return jsonify({"error": "Hero not found"}), 404
 
-    powers = [{"id": power.id, "name": power.name, "description": power.description} for power in hero.hero_powers]
+    powers = [{"id": power.id, "name": power.name} for power in hero.hero_powers]
 
     created_hero_power_data = {
         'id': hero.id,
